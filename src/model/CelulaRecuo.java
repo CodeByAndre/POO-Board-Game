@@ -1,6 +1,4 @@
-x/* Module and purpose: Cell that moves the pawn backwards.
- * Student name/number and implemented contributions: <Aluno 2> - implementation
- * Collaborator/reviewer and contribution: <Aluno 1> - review
+/* Module and purpose: Cell that moves the pawn backwards.
  * AI assistance: Claude, initial skeleton - see AI_USE.md
  */
 package model;
