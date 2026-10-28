@@ -1,4 +1,8 @@
-/* Module and purpose: Dado that returns random values between 1 and 6. */
+/* Module and purpose: Dado that returns random values between 1 and 6.
+ * Student name/number and implemented contributions: <Aluno 1> - implementation
+ * Collaborator/reviewer and contribution: <Aluno 2> - review
+ * AI assistance: Claude, initial skeleton - see AI_USE.md
+ */
 package model;
 
 import java.util.Random;
@@ -13,6 +17,7 @@ public class DadoAleatorio implements Dado {
         this.random = new Random();
     }
 
+    // Sobrecarga: com semente, a sequência é repetível (usado nos testes).
     public DadoAleatorio(long semente) {
         this.random = new Random(semente);
     }

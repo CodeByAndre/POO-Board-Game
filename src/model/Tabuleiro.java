@@ -1,4 +1,6 @@
 /* Module and purpose: Board with 30 numbered cells (1..30) and the Metro map.
+ * Student name/number and implemented contributions: <Diogo Marques> - implementation
+ * Collaborator/reviewer and contribution: <André Ferreira> - review
  * AI assistance: Claude, initial skeleton - see AI_USE.md
  */
 package model;

@@ -1,4 +1,6 @@
 /* Module and purpose: Abstract board cell; subclasses define the effect via deslocamento().
+ * Student name/number and implemented contributions: <André Ferreira> - class design
+ * Collaborator/reviewer and contribution: <Diogo Marques> - review
  * AI assistance: Claude, initial skeleton - see AI_USE.md
  */
 package model;

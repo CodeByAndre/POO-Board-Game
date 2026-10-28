@@ -1,4 +1,6 @@
 /* Module and purpose: Cell that moves the pawn forward.
+ * Student name/number and implemented contributions: <André Ferreira> - implementation
+ * Collaborator/reviewer and contribution: <Diogo Marques> - review
  * AI assistance: Claude, initial skeleton - see AI_USE.md
  */
 package model;

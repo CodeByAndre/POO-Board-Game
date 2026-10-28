@@ -1,4 +1,6 @@
 /* Module and purpose: Player with a name and the pawn position on the board.
+ * Student name/number and implemented contributions: <Diogo Marques> - implementation
+ * Collaborator/reviewer and contribution: <André Ferreira> - review
  * AI assistance: Claude, initial skeleton - see AI_USE.md
  */
 package model;
