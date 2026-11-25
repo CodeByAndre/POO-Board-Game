@@ -1,5 +1,5 @@
-/* Module and purpose: Game rules: turns, movement, bounce, cell effect, 50-round limit, tie-break and restart.
- * Student name/number and implemented contributions: André Ferreira (30017457) - movement and effects; Diogo Marques (30016433) - turns, end of game, round limit and restart
+/* Module and purpose: Game rules: turns, movement, bounce, chained effects, 50-round limit, tie-break and restart.
+ * Student name/number and implemented contributions: André Ferreira (30017457) - movement, effects and chaining; Diogo Marques (30016433) - turns, end of game, round limit and restart
  * Collaborator/reviewer and contribution: cross review between both students
  * AI assistance: Claude, initial skeleton - see AI_USE.md
  */
@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class Jogo {
     public static final int MAX_RONDAS = 50;
+    public static final int MAX_ENCADEAMENTO = 5;
 
     private final Tabuleiro tabuleiro;
     private final ArrayList<Jogador> jogadores;
@@ -55,33 +56,43 @@ public class Jogo {
             ressalto = true;
         }
 
-        int destino = alvo;
-        String efeito = null;
-        Celula celula = tabuleiro.getCelula(alvo);
+        // Efeitos em cadeia: aplica-se o efeito da casa onde se cai, e assim sucessivamente.
+        ArrayList<String> efeitos = new ArrayList<>();
+        int posicao = alvo;
+        int passos = 0;
 
-        if (alvo != ultima && celula.deslocamento() != 0) {
-            destino = alvo + celula.deslocamento();
-            efeito = celula.getNome();
+        while (posicao != ultima && passos < MAX_ENCADEAMENTO) {
+            Celula celula = tabuleiro.getCelula(posicao);
+
+            if (celula.deslocamento() == 0) {
+                break;
+            }
+
+            int seguinte = posicao + celula.deslocamento();
+
+            if (seguinte > ultima) {
+                seguinte = ultima;
+            }
+
+            if (seguinte < 1) {
+                seguinte = 1;
+            }
+
+            efeitos.add(celula.getNome() + ": casa " + posicao + " -> " + seguinte);
+            posicao = seguinte;
+            passos++;
         }
 
-        if (destino > ultima) {
-            destino = ultima;
-        }
+        jogador.moverPara(posicao);
 
-        if (destino < 1) {
-            destino = 1;
-        }
-
-        jogador.moverPara(destino);
-
-        if (destino == ultima) {
+        if (posicao == ultima) {
             terminou = true;
             vencedor = jogador;
         } else {
             avancarTurno();
         }
 
-        return new ResultadoJogada(jogador.getNome(), valor, origem, destino, ressalto, efeito);
+        return new ResultadoJogada(jogador.getNome(), valor, origem, posicao, ressalto, efeitos);
     }
 
     // Sobrecarga: obtém o valor diretamente de uma fonte de dado.
