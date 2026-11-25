@@ -1,6 +1,6 @@
 /* Module and purpose: Player with a name and the pawn position on the board.
- * Student name/number and implemented contributions: <Diogo Marques> - implementation
- * Collaborator/reviewer and contribution: <André Ferreira> - review
+ * Student name/number and implemented contributions: Diogo Marques (30016433) - implementation, reiniciar()
+ * Collaborator/reviewer and contribution: André Ferreira (30017457) - review
  * AI assistance: Claude, initial skeleton - see AI_USE.md
  */
 package model;
@@ -35,5 +35,9 @@ public class Jogador {
 
         this.posicao = novaPosicao;
         return true;
+    }
+
+    public void reiniciar() {
+        this.posicao = POSICAO_INICIAL;
     }
 }
