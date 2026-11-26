@@ -1,0 +1,102 @@
+=== Metro de Lisboa ===
+Nome do jogador 1 (Enter = Jogador 1): Ana
+Nome do jogador 2 (Enter = Jogador 2): Rui
+
+Modo de lançamento:
+  1 - Dado aleatório
+  2 - Valor introduzido manualmente
+Escolha (1/2): 2
+
+Ronda 1/50 | Posições (1, 1) | Vez de Ana
+Valor do dado (1-6), r para reiniciar, q para sair: 8
+Valor inválido: tem de ser um número inteiro entre 1 e 6.
+
+Ronda 1/50 | Posições (1, 1) | Vez de Ana
+Valor do dado (1-6), r para reiniciar, q para sair: abc
+Valor inválido: tem de ser um número inteiro entre 1 e 6.
+
+Ronda 1/50 | Posições (1, 1) | Vez de Ana
+Valor do dado (1-6), r para reiniciar, q para sair: 3
+Ana lançou 3: sai da casa 1
+  Efeito: Comboio direto: casa 4 -> 7
+  Fica na casa 7
+
+Ronda 1/50 | Posições (7, 1) | Vez de Rui
+Valor do dado (1-6), r para reiniciar, q para sair: 2
+Rui lançou 2: sai da casa 1
+  Fica na casa 3
+
+Ronda 2/50 | Posições (7, 3) | Vez de Ana
+Valor do dado (1-6), r para reiniciar, q para sair: 5
+Ana lançou 5: sai da casa 7
+  Efeito: Correspondência: casa 12 -> 17
+  Fica na casa 17
+
+Ronda 2/50 | Posições (17, 3) | Vez de Rui
+Valor do dado (1-6), r para reiniciar, q para sair: 1
+Rui lançou 1: sai da casa 3
+  Efeito: Comboio direto: casa 4 -> 7
+  Fica na casa 7
+
+Ronda 3/50 | Posições (17, 7) | Vez de Ana
+Valor do dado (1-6), r para reiniciar, q para sair: 5
+Ana lançou 5: sai da casa 17
+  Efeito: Linha expresso: casa 22 -> 26
+  Efeito: Falha de energia: casa 26 -> 21
+  Fica na casa 21
+
+Ronda 3/50 | Posições (21, 7) | Vez de Rui
+Valor do dado (1-6), r para reiniciar, q para sair: 2
+Rui lançou 2: sai da casa 7
+  Efeito: Avaria na linha: casa 9 -> 5
+  Fica na casa 5
+
+Ronda 4/50 | Posições (21, 5) | Vez de Ana
+Valor do dado (1-6), r para reiniciar, q para sair: 6
+Ana lançou 6: sai da casa 21
+  Fica na casa 27
+
+Ronda 4/50 | Posições (27, 5) | Vez de Rui
+Valor do dado (1-6), r para reiniciar, q para sair: 6
+Rui lançou 6: sai da casa 5
+  Fica na casa 11
+
+Ronda 5/50 | Posições (27, 11) | Vez de Ana
+Valor do dado (1-6), r para reiniciar, q para sair: 6
+Ana lançou 6: sai da casa 27
+  Passou do terminal e voltou atrás
+  Fica na casa 27
+
+Ronda 5/50 | Posições (27, 11) | Vez de Rui
+Valor do dado (1-6), r para reiniciar, q para sair: 1
+Rui lançou 1: sai da casa 11
+  Efeito: Correspondência: casa 12 -> 17
+  Fica na casa 17
+
+Ronda 6/50 | Posições (27, 17) | Vez de Ana
+Valor do dado (1-6), r para reiniciar, q para sair: 3
+Ana lançou 3: sai da casa 27
+  Fica na casa 30
+
+Posições finais (30, 17)
+Vencedor: Ana
+Jogar outra vez? (s/n): s
+Nova partida.
+
+Modo de lançamento:
+  1 - Dado aleatório
+  2 - Valor introduzido manualmente
+Escolha (1/2): 2
+
+Ronda 1/50 | Posições (1, 1) | Vez de Ana
+Valor do dado (1-6), r para reiniciar, q para sair: 2
+Ana lançou 2: sai da casa 1
+  Fica na casa 3
+
+Ronda 1/50 | Posições (3, 1) | Vez de Rui
+Valor do dado (1-6), r para reiniciar, q para sair: r
+Partida reiniciada. Todos voltam à casa 1.
+
+Ronda 1/50 | Posições (1, 1) | Vez de Ana
+Valor do dado (1-6), r para reiniciar, q para sair: q
+Jogo terminado.
