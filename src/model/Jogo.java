@@ -24,7 +24,16 @@ public class Jogo {
 
     // Sobrecarga: permite escolher os nomes dos jogadores.
     public Jogo(String nome1, String nome2) {
-        this.tabuleiro = new Tabuleiro();
+        this(new Tabuleiro(), nome1, nome2);
+    }
+
+    // Sobrecarga: permite usar outro tabuleiro (usado nos testes).
+    public Jogo(Tabuleiro tabuleiro, String nome1, String nome2) {
+        if (tabuleiro == null) {
+            throw new IllegalArgumentException("Tabuleiro é obrigatório");
+        }
+
+        this.tabuleiro = tabuleiro;
         this.jogadores = new ArrayList<>();
         this.jogadores.add(new Jogador(nome1));
         this.jogadores.add(new Jogador(nome2));
